@@ -1,0 +1,270 @@
+﻿        table {
+            cursor: default;
+        }
+
+.ms-crm-RefreshDialog-Header {
+	border-bottom-color: rgb(164, 171, 178);
+	background-color: rgb(255, 255, 255);
+}
+.ms-crm-RefreshDialog-Header {
+	top: 0px;
+	width: 100%;
+	height: 75px;
+	padding-top: 10px;
+	position: absolute;
+}
+body, input, select, textarea, table.ms-crm-Loading, div.ms-crm-Grid-Title {
+	font-family: Segoe UI,Tahoma,Arial;
+	font-size: 11px;
+}
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0px;
+	border: 0px currentColor;
+	cursor: default;
+	direction: ltr;
+}
+body.ms-crm-Setting-Context-top, body {
+	-ms-scrollbar-base-color: rgb(205, 205, 205);
+	-ms-scrollbar-face-color: rgb(205, 205, 205);
+	-ms-scrollbar-3dlight-color: rgb(240, 240, 240);
+	-ms-scrollbar-shadow-color: rgb(205, 205, 205);
+	-ms-scrollbar-highlight-color: rgb(205, 205, 205);
+	-ms-scrollbar-darkshadow-color: rgb(240, 240, 240);
+	-ms-scrollbar-arrow-color: rgb(30, 57, 91);
+	-ms-scrollbar-track-color: rgb(240, 240, 240);
+	background-color: rgb(255, 255, 255);
+}
+body {
+	overflow: hidden;
+}
+.ms-crm-TextAutoEllipsis, span.ms-crm-View-Entity-OverflowName {
+	overflow: hidden;
+	white-space: nowrap;
+	-ms-text-overflow: ellipsis;
+}
+.ms-crm-RefreshDialog-Header-Title, td.ms-crm-RefreshDialog-Error-Title {
+	color: rgb(38, 38, 38);
+}
+.ms-crm-RefreshDialog-Header-Title, td.ms-crm-RefreshDialog-Error-Title {
+	font-family: Segoe UI Light, Segoe UI, Tahoma, Arial;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+div.ms-crm-RefreshDialog-Header-Title, td.ms-crm-RefreshDialog-Error-Title {
+	font-size: 27px;
+	font-weight: lighter;
+}
+.ms-crm-RefreshDialog-Button, .ms-crm-RefreshDialog-Header-Desc, .ms-crm-RefreshDialog-Main, .ms-crm-RefreshDialog-Main-HeaderLess {
+	font-size: 12px;
+}
+.ms-crm-RefreshDialog-Header-Desc {
+	color: rgb(68, 68, 68);
+}
+.ms-crm-RefreshDialog-Header-Desc {
+	padding-top: 4px;
+	font-family: Segoe UI,Tahoma,Arial;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+        .ms-crm-IE7-Height-Fix-Dummy-Container {
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .ms-crm-RefreshDialog-Warning {
+            left: 30px;
+            top: 5px;
+            right: 30px;
+            bottom: 20px;
+            position: absolute;
+        }
+
+        .ms-crm-RefreshDialog-Button, .ms-crm-RefreshDialog-Header-Desc, .ms-crm-RefreshDialog-Main, .ms-crm-RefreshDialog-Main-HeaderLess {
+            font-size: 12px;
+        }
+
+        .ms-crm-RefreshDialog-Main, .ms-crm-RefreshDialog-Main-HeaderLess {
+            color: rgb(68, 68, 68);
+            border-bottom-color: rgb(164, 171, 178);
+            background-color: rgb(255, 255, 255);
+        }
+
+        .ms-crm-RefreshDialog-Main, .ms-crm-RefreshDialog-Main-HeaderLess {
+            width: 100%;
+            bottom: 49px;
+            overflow: auto;
+            font-family: Segoe UI,Tahoma,Arial;
+            vertical-align: top;
+            position: absolute;
+        }
+
+        .ms-crm-RefreshDialog-Main {
+            top: 90px;
+        }
+
+        body, input, select, textarea, table.ms-crm-Loading, div.ms-crm-Grid-Title {
+            font-family: Segoe UI,Tahoma,Arial;
+            font-size: 11px;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0px;
+            border: 0px currentColor;
+            cursor: default;
+            direction: ltr;
+        }
+
+            body.ms-crm-Setting-Context-top, body {
+                -ms-scrollbar-base-color: rgb(205, 205, 205);
+                -ms-scrollbar-face-color: rgb(205, 205, 205);
+                -ms-scrollbar-3dlight-color: rgb(240, 240, 240);
+                -ms-scrollbar-shadow-color: rgb(205, 205, 205);
+                -ms-scrollbar-highlight-color: rgb(205, 205, 205);
+                -ms-scrollbar-darkshadow-color: rgb(240, 240, 240);
+                -ms-scrollbar-arrow-color: rgb(30, 57, 91);
+                -ms-scrollbar-track-color: rgb(240, 240, 240);
+                background-color: rgb(255, 255, 255);
+            }
+
+        body {
+            overflow: hidden;
+        }
+
+        td {
+            font-size: 11px;
+        }
+
+        a, a:link img, a:link, a:visited img, a:visited, a:active img, a:active, a:hover img, a:hover a:hover img, input, textarea, select {
+            color: rgb(0, 0, 0);
+        }
+
+
+        input, textarea {
+            width: 100%;
+        }
+
+
+            input.checkbox {
+                border: 0px currentColor;
+                width: 16px;
+                height: 12px;
+                cursor: pointer;
+            }
+
+        label {
+            cursor: pointer;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+.ms-crm-RefreshDialog-Footer {
+	border-top-color: rgb(255, 255, 255);
+	background-color: rgb(248, 248, 248);
+}
+.ms-crm-RefreshDialog-Footer {
+	width: 100%;
+	height: 44px;
+	text-align: right;
+	bottom: 0px;
+	position: absolute;
+	min-width: 288px;
+}
+body, input, select, textarea, table.ms-crm-Loading, div.ms-crm-Grid-Title {
+	font-family: Segoe UI,Tahoma,Arial;
+	font-size: 11px;
+}
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0px;
+	border: 0px currentColor;
+	cursor: default;
+	direction: ltr;
+}
+body.ms-crm-Setting-Context-top, body {
+	-ms-scrollbar-base-color: rgb(205, 205, 205);
+	-ms-scrollbar-face-color: rgb(205, 205, 205);
+	-ms-scrollbar-3dlight-color: rgb(240, 240, 240);
+	-ms-scrollbar-shadow-color: rgb(205, 205, 205);
+	-ms-scrollbar-highlight-color: rgb(205, 205, 205);
+	-ms-scrollbar-darkshadow-color: rgb(240, 240, 240);
+	-ms-scrollbar-arrow-color: rgb(30, 57, 91);
+	-ms-scrollbar-track-color: rgb(240, 240, 240);
+	background-color: rgb(255, 255, 255);
+}
+body {
+	overflow: hidden;
+}
+button {
+	font-size: 11px;
+}
+button {
+	border-width: 1px;
+	border-style: solid;
+	width: 84px;
+	height: 20px;
+	text-align: center;
+	line-height: 16px;
+	padding-right: 5px;
+	padding-left: 5px;
+	cursor: pointer;
+	background-repeat: repeat-x;
+}
+button {
+	border-color: rgb(102, 102, 102);
+	background-image: url("/_imgs/theme/Outlook15White/ButtonNormalGradient.png?ver=-889823255");
+}
+select.ms-crm-SelectBox
+{
+    border: 1px solid #c6c6c6;
+    font-size: 11px;
+    width: 100%;
+}
+.ms-crm-RefreshDialog-Button, .ms-crm-RefreshDialog-Header-Desc, .ms-crm-RefreshDialog-Main, .ms-crm-RefreshDialog-Main-HeaderLess {
+	font-size: 12px;
+}
+.ms-crm-RefreshDialog-Button {
+	color: rgb(68, 68, 68);
+	background-color: rgb(255, 255, 255);
+}
+.ms-crm-RefreshDialog-Button {
+	border: 1px solid rgb(198, 198, 198);
+	width: auto;
+	height: 24px;
+	font-family: Segoe UI,Tahoma,Arial;
+	margin-top: 10px;
+	white-space: nowrap;
+	min-width: 80px;
+	background-image: none;
+}
+
+.ms-crm-ImageStrip-frm_required
+{
+    background: transparent url(/_imgs/imagestrips/control_imgs.png?ver=-1717241532) no-repeat scroll -194px -70px;
+    width: 10px;
+    height: 11px;
+    overflow: hidden;
+}
+
+.ms-crm-InlineEditLabel .ms-crm-Inline-RequiredLevel
+{
+    float: left;
+}
+
+:disabled.ms-crm-RefreshDialog-Button {
+	color: rgb(177, 177, 177);
+}

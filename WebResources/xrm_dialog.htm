@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Route Comment</title>
+    <link rel="stylesheet" type="text/css" href="xrm_dialog.css" />
+    <script type="text/javascript" src="/_common/ClientGlobalContext.js.aspx"></script>
+    <script type="text/javascript" src="xrm_jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+        });
+
+        var GUID_EMPTY = "00000000-0000-0000-0000-000000000000";
+
+        function cancel() {
+            closeWindow(true);
+            // this.close();
+        }
+
+        function disableLookup(lookupName)
+        {
+            lookupName = "#" + lookupName;
+            $(lookupName).attr("src", "/_imgs/btn_dis_lookup.png");
+            $(lookupName).css("cursor", "default");
+            $(lookupName).removeClass("ms-crm-ImageStrip-btn_off_lookup");
+            $(lookupName).addClass("ms-crm-ImageStrip-btn_dis_lookup");
+        }
+
+        function enableLookup(lookupName)
+        {
+            lookupName = "#" + lookupName;
+            $(lookupName).attr("src", "/_imgs/btn_off_lookup.png");
+            $(lookupName).css("cursor", "pointer");
+            $(lookupName).removeClass("ms-crm-ImageStrip-btn_dis_lookup");
+            $(lookupName).addClass("ms-crm-ImageStrip-btn_off_lookup");
+        }
+
+        function applyChanges() {
+            var returnValue = "";
+
+            var message = $("#crmRoutingMessage").val();
+            if (message != '') {
+
+				var otherId = $("#crmOtherLookup_lId").val();
+				var otherName = $("#crmOtherLookup_ledit").val();
+				returnValue = otherId + ':' + otherName; 
+
+				Mscrm.Utilities.setReturnValue(returnValue);
+				closeWindow(true);
+			}
+			else
+			{
+				alert('Please enter a Routing Message');
+			}
+        }
+
+        function unrouteComment() {
+			alert('Unroute message has been called. Please ignore');
+        }
+
+        function openOther() {
+
+            var imgButton = $("#crmOtherLookup").attr("src");
+            if (imgButton == "/_imgs/btn_off_lookup.png") {
+
+
+                var objectTypeCode = 8;
+                var url = "/_controls/lookup/lookupinfo.aspx?AllowFilterOff=0&DefaultType=8&DefaultViewId=%7bE88CA999-0B16-4AE9-B6A9-9EDC840D42D8%7d&DisableQuickFind=0&DisableViewPicker=1&IsInlineMultiLookup=0&LookupStyle=single&ShowNewButton=0&ShowPropButton=0&browse=false&dType=1&mrsh=false&objecttypes=8";
+
+                var DialogOption = new Xrm.DialogOptions;
+                DialogOption.width = 500; DialogOption.height = 400;
+                Xrm.Internal.openDialog(url, DialogOption, null, null, openOtherCallback);
+            }
+            else {
+                alert("Please select the radio button to the left of Other in order to select a system user.");
+            }
+        }
+
+        function openOtherCallback(returnValue) {
+            if (returnValue != null)
+            {
+                if (returnValue.items.length > 0) {
+                    var guid = returnValue.items[0].id;
+                    var name = returnValue.items[0].name;
+                    $("#crmOtherLookup_ledit").val(name); // text 
+                    $("#crmOtherLookup_lId").val(guid); // hidden                    
+                }
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="ms-crm-RefreshDialog-Main-Container">
+        <div class="ms-crm-RefreshDialog-Header" id="tdDialogHeader" overriddenfirstfocusableonloadelementid="" overriddenfirstfocusableelementid="" overridedefaultfocus="False">
+            <div title="Reject Comment" class="ms-crm-RefreshDialog-Header-Title ms-crm-TextAutoEllipsis" id="dialogHeaderTitle" style="width: 100%;">Route Comment</div>
+            <div title="Enter the reason for rejecting the comment." class="ms-crm-RefreshDialog-Header-Desc" id="dialogHeaderDesc">Select the user for routing the comment.</div>
+        </div>
+
+        <div class="ms-crm-RefreshDialog-Main" id="DlgHdBodyContainer">
+            <div class="ms-crm-RefreshDialog-Warning" id="divWarning">
+                <div class="ms-crm-IE7-Height-Fix-Dummy-Container" id="dummyDivforIE7">
+                    <table width="100%" style="table-layout: fixed;" cellspacing="5" cellpadding="0">
+                        <colgroup>
+                            <col width="140">
+                            <col>
+                            <tbody>
+
+                                <tr>
+                                    <td valign="top">
+                                        <label hidefocus="true"><b>Routing Message</b></label>
+                                        <img class="ms-crm-ImageStrip-frm_required ms-crm-Inline-RequiredLevel" alt="Required" src="/_imgs/imagestrips/transparent_spacer.gif?ver=-1717241532">
+                                    </td>
+
+                                    <td valign="top">
+                                        <textarea rows="2" class="ms-crm-inlineinput ms-crm-field-data-print" id="crmRoutingMessage" style="padding: 2px 0px 1px; border-right-color: currentColor; border-right-width: 0px; border-right-style: none; display: inline;" type="text" maxlength="1000" ime-mode="auto"></textarea>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+
+                                <tr>
+                                    <td valign="top">
+                                        <label hidefocus="true" for="rdoOther">
+                                            <b>Other</b>
+                                        </label>
+
+									</td>
+                                    <td valign="top">
+                                        <div class="Desc">Route the selected Comment to another user.</div>
+                                        <table width="100%" style="table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <table class="ms-crm-Lookup" id="crmOtherLookup_lookupTable" style="width: 100%; table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="crmOtherLookup">
+                                                            <tbody><tr><td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                                <div tabindex="0" class="ms-crm-Lookup ms-crm-ReadOnly ms-crm-Lookup-ReadOnly" role="list" style="width: 100%;" ime-mode="auto">
+                                                                <!-- <ul style="width: 100%; text-align: left; float: left;"></ul> -->    
+                                                                    <input type="hidden" id="crmOtherLookup_lId" />
+                                                                </div>
+                                                                    <!-- <label class="ms-crm-Hidden-NoBehavior" for="crmOwnerLookup_ledit">Assign the selected Comment to the following user or team:</label> -->
+                                                                           <input disabled="disabled" tabindex="0" class="ms-crm-Hidden-NoBehavior" id="crmOtherLookup_ledit" style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none; display: inline;" type="text" maxlength="1000" ime-mode="auto"></td>
+                                                                    <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                                        <img title="Click to select a value for Routing the selected Comment to the following user:" class="ms-crm-Lookup ms-crm-ImageStrip-btn_dis_lookup" id="crmOtherLookup" style="cursor: default;" alt="Click to select a value to Router the selected Comment to the following user:" src="/_imgs/btn_off_lookup.png" forcesubmit="false" isenableinlinelookupforeditforms="1" lookupstyle="single" lookuptypes="8" lookuptypenames="systemuser:8:User" lookuptypeicons="/_imgs/ico_16_8.gif?ver=-889823255" onclick="openOther();">
+                                                                    <a tabindex="-1" title="Click to select a value for Routing the selected Comment to the following user" onclick="openOther();" href="#"></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="ms-crm-RefreshDialog-Footer" id="tdDialogFooter">
+            <button class="ms-crm-RefreshDialog-Button" id="butUnroute" style="margin-right: 275px; margin-left: 8px;" onclick="unrouteComment();" type="button">Unroute</button>
+            <button class="ms-crm-RefreshDialog-Button" id="butBegin" style="margin-left: 8px;" onclick="applyChanges();" type="button">OK</button>
+            <button class="ms-crm-RefreshDialog-Button" id="cmdDialogCancel" style="margin-right: 30px; margin-left: 8px;" onclick="cancel();" type="button" lasttabelement="true">Cancel</button>
+        </div>
+
+    </div>
+</body>
+</html>
